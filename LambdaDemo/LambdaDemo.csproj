@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="boltProblem\Bolt.cs" />
+    <Compile Include="boltProblem\BoltNode.cs" />
+    <Compile Include="boltProblem\BoltProblemSolver.cs" />
+    <Compile Include="boltProblem\Nut.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

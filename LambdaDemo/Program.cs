@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using LambdaDemo.boltProblem;
 
 namespace LambdaDemo
 {
@@ -48,6 +49,16 @@ namespace LambdaDemo
             Console.WriteLine("for loop : " + forLoopTimeElapsed + " " + oddNumberCount);
             Console.WriteLine("lambda   : " + lambdaTimeElapsed + " " + count);
 
+
+
+            BoltProblemSolver problem = new BoltProblemSolver(10000000);
+
+            timer = Stopwatch.StartNew();
+            problem.solve();
+            timer.Stop();
+            timeSpan = timer.Elapsed;
+            Console.WriteLine(String.Format("{0:00}:{1:00}:{2:00}", timeSpan.Minutes, timeSpan.Seconds, timeSpan.Milliseconds / 10));
+            Console.WriteLine("Finished.");
             Console.ReadKey();
         }
     }
